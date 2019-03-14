@@ -3,10 +3,10 @@
 #include "Board.cpp"
 
 using namespace std;
-Board chess;
+Board minesweep;
 void updateBoard(int& x, int& y){
-    chess.spaces[x][y] = '+';
-    chess.print();
+    minesweep.spaces[x][y] = '+';
+    minesweep.print();
 }
 
 // void gotKilled(bool& dead){
@@ -19,15 +19,15 @@ void chooseSpace(int& x, int& y, bool& dead){
         cin >> x >> y;
         x--;
         y--;
-        if(chess.occupied[x][y] == true){
+        if(minesweep.occupied[x][y] == true){
             //gotKilled();
             cout << "BANG! U B DED!";
             dead = true;
         }
         else {
             updateBoard(x, y);
-            //chess.spaces[x][y] = '+';
-            //chess.print();
+            //minesweep.spaces[x][y] = '+';
+            //minesweep.print();
         }
 }
 
@@ -37,8 +37,8 @@ int main(){
     
     int x = 0, y = 0;
     
-    chess.setup();
-    chess.print();
+    minesweep.setup();
+    minesweep.print();
 
     cout << "The bomb has been planted!" << endl << endl;
     while(!exploded){
