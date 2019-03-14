@@ -15,7 +15,7 @@ void updateBoard(int& x, int& y){
 // }
 
 void chooseSpace(int& x, int& y, bool& dead){
-    cout << endl << "Choose a space that is hopefully not a bomb (x y): ";
+    cout << endl << "Choose a space that is hopefully not a bomb (1-8)(x y)" << endl << "(BTW, choose any other number or a letter and you blow up instantly!): ";
         cin >> x >> y;
         x--;
         y--;

@@ -34,6 +34,7 @@ class Board {
                 y = rand() % B_SIZE;
 
                 occupied[x][y] = true;
+                //visualize bomb spaces to make sure they are placing.
                 spaces[x][y] = 'x';
             }
             
